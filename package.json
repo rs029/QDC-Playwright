@@ -1,0 +1,38 @@
+{
+  "name": "qdc-playwright",
+  "version": "1.0.0",
+  "description": "Playwright testing framework with TypeScript and Page Object Model",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:codegen": "playwright codegen",
+    "test:cucumber": "cucumber-js --config cucumber.config.js",
+    "test:cucumber:headed": "cucumber-js --config cucumber.config.headed.js",
+    "test:cucumber:slow": "cucumber-js --config cucumber.config.slow.js",
+    "test:cucumber:feature": "cucumber-js --config cucumber.config.js --grep",
+    "test:cucumber:single": "cucumber-js --config cucumber.config.js --grep",
+    "test:cucumber:tag": "cucumber-js --config cucumber.config.js --tags"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "typescript",
+    "pom"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "playwright": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "@cucumber/cucumber": "^10.0.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "ts-node": "^10.9.2"
+  }
+}
+
