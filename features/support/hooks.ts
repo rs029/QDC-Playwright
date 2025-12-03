@@ -49,6 +49,11 @@ After(async function (scenario: any) {
     console.log(`Screenshot saved: ${screenshotPath}`);
   }
   
-  await cleanupBrowser();
+  // Safe cleanup without blocking
+  try {
+    await cleanupBrowser?.();
+  } catch (e) {
+    console.log("cleanupBrowser error:", e);
+  }
 });
 

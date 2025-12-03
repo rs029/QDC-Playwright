@@ -1,6 +1,7 @@
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
 import { LoginPage } from '../../pages/LoginPage';
 import { HomePage } from '../../pages/HomePage';
+import { CustomerPage } from '../../pages/CustomerPage';
 import { setWorldConstructor, World } from '@cucumber/cucumber';
 /**
  * World object for sharing state between step definitions
@@ -11,6 +12,7 @@ export let context: BrowserContext;
 export let page: Page;
 export let loginPage: LoginPage;
 export let homePage: HomePage;
+export let customerPage: CustomerPage;
 
 // Store for dialog messages
 let lastDialogMessage: string | null = null;
@@ -107,6 +109,7 @@ export async function initializeBrowser(headed: boolean = false, slowMo: number 
   // Initialize page objects
   loginPage = new LoginPage(page);
   homePage = new HomePage(page);
+  customerPage = new CustomerPage(page);
 }
 
 /**
